@@ -24,6 +24,7 @@ const onSearch = async () => {
     if (data) {
       // Optimize the object and emit
       emits("info", data);
+      loading.value = false;
     } else {
       error.value = "Invalid Search";
     }

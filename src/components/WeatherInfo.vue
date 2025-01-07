@@ -1,24 +1,24 @@
 <template>
-  <section v-if="info">
+  <section v-if="info && weather">
     <div @click="onUnitChange" class="toggleBtn">
       {{ unit }}
     </div>
     <div>
-      <div><b>City</b>: {{ info.name }}</div>
+      <div><b>City</b>: {{ info?.name }}</div>
       <div>
-        <b>Temprature ({{ unit }})</b>: {{ weather.main.temp }}
+        <b>Temprature ({{ unit }})</b>: {{ weather?.main?.temp }}
       </div>
       <div>
         <b>Weather Descriptions</b>:
         <ul>
-          <li v-for="d of weather.weather" :key="d.main">
+          <li v-for="d of weather?.weather" :key="d.main">
             {{ d.main }}
           </li>
         </ul>
       </div>
-      <div><b>Visibility</b>: {{ weather.visibility }}</div>
-      <div><b>Humidity</b>: {{ weather.main.humidity }}</div>
-      <div><b>Wind Speed</b>: {{ weather.wind.speed }}</div>
+      <div><b>Visibility</b>: {{ weather?.visibility }}</div>
+      <div><b>Humidity</b>: {{ weather?.main?.humidity }}</div>
+      <div><b>Wind Speed</b>: {{ weather?.wind?.speed }}</div>
     </div>
   </section>
   <!-- <pre>{{ weather }}</pre> -->
