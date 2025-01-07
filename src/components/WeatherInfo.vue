@@ -11,7 +11,7 @@
       <div>
         <b>Weather Descriptions</b>:
         <ul>
-          <li v-for="d of weather.weather">
+          <li v-for="d of weather.weather" :key="d.main">
             {{ d.main }}
           </li>
         </ul>
