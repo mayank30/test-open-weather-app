@@ -2,7 +2,6 @@
   <SearchCity @info="info = $event" />
   <br />
   <WeatherInfo :info="info" />
-  <br />
 </template>
 
 <script setup lang="ts">

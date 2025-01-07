@@ -24,7 +24,7 @@
   <!-- <pre>{{ weather }}</pre> -->
 </template>
 <script setup lang="ts">
-import api from "../services/weather.api.ts";
+import api from "../services/weather.api";
 import { ref, watch } from "vue";
 const props = defineProps({
   info: Object,

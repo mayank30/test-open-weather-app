@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import api from "../services/weather.api.ts";
+import api from "../services/weather.api";
 
 const search = ref("");
 const error = ref("");
@@ -27,7 +27,7 @@ const onSearch = async () => {
     } else {
       error.value = "Invalid Search";
     }
-  } catch (e: String) {
+  } catch (e: any) {
     error.value = e;
   } finally {
     loading.value = false;
